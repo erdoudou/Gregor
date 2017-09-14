@@ -1,0 +1,25 @@
+body{
+	background-color:pink;
+}
+
+#div_login{
+	
+    text-align: center;
+	
+    margin: 350px 40px 0px 1200px;
+}
+
+.text_name{
+	font-size: 30px;
+    font-family: Monospace;
+}
+
+.text_input{
+	font-size: 20px;
+}
+
+.but_login{
+	font-size:22px;
+	width:360px;
+	margin-top:30px;
+}
