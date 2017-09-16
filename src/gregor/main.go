@@ -11,13 +11,25 @@ import (
 func main() {
 	log.Println("main")
 
-	db.Init("mysql", "root", "root", "gun", "192.168.2.20:3306")
+	db.Init("mysql", "root", "root", "gregor", "127.0.0.1:3306")
+
 	roleMgr.GetAllRole()
 
+	loadStaticFile()
+	loadHtmlFile()
+
+	http.ListenAndServe(":8888", nil)
+}
+
+//加载静态文件
+func loadStaticFile() {
 	http.Handle("/css/", http.FileServer(http.Dir("../../template")))
 	http.Handle("/js/", http.FileServer(http.Dir("../../template")))
 	http.Handle("/images/", http.FileServer(http.Dir("../../template")))
+}
 
+//加载htmll页面
+func loadHtmlFile() {
 	http.HandleFunc("/home/", controll.HomeHandler)
 
 	http.HandleFunc("/register/", controll.RegisterHandler)
@@ -31,6 +43,4 @@ func main() {
 	http.HandleFunc("/", controll.NotFoundHandler)
 
 	http.HandleFunc("/test", controll.TestHandler)
-
-	http.ListenAndServe(":8888", nil)
 }
