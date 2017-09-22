@@ -8,6 +8,7 @@ import (
 	"net/http"
 )
 
+//首先访问的网址为：http://localhost:8888/register/register
 func main() {
 	log.Println("main")
 
