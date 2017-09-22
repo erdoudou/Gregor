@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-22 14:35:37
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-22 16:03:39
+* @Last Modified time: 2017-09-22 21:06:50
 */
 $(function(){
 
@@ -23,15 +23,47 @@ bloodImg.src="/images/blood 018.png"
 
 
 bloodImg.onload=function(){
-	console.log("fdsaf")
+	var canvas2=document.querySelector("#canvas2");
+	var ctx2=canvas2.getContext("2d");
+		ctx2.drawImage(bloodImg,0,0,canvas2.width,canvas2.height);
+
+	
+	// var imgData=ctx.getImageData(0,0,canvas2.width,canvas2.height)
+
+	// console.log(imgData)
+		var timer2=null;
 	$("#canvas").click(function(e){
-		ctx.clearRect(0,0,canvas.width,canvas.height);
-		ctx.drawImage(bgImg,0,0,canvas.width,canvas.height)
+		clearInterval(timer2)
+		// ctx.drawImage(bgImg,0,0,canvas.width,canvas.height)
+
+		
+
 		console.log("dsfas")
 		var _left=e.clientX;
 		var _top=e.clientY;
 		console.log(_left)
-		ctx.drawImage(bloodImg,_left,_top,100,100)
+		// ctx.drawImage(bloodImg,_left,_top,100,100)
+		$("#canvas1").css({
+			left:_left,
+			top:_top
+		})
+		var canvas1=document.querySelector("#canvas1")
+		var ctx1=canvas1.getContext("2d");
+		ctx1.clearRect(0,0,canvas1.width,canvas1.height);
+
+		
+		var n=1;
+				timer2=setInterval(function(){
+				var imgData=ctx2.getImageData(0,0,100,n)
+				ctx1.putImageData(imgData,0,0,0,0,100,100)
+				// console.log(imgData,n)
+				n++;
+				if(n==100){
+					clearInterval(timer2)
+				}
+
+			},50)
+	
 	})
 }
 
@@ -79,8 +111,9 @@ bloodImg.onload=function(){
 
 										var i=0;
 							var timer1=setInterval(function(){
-											i++
+											
 											$("#show span").eq(i).animate({opacity:1})
+											i++
 											if(i==$("#show span").length){
 												setTimeout(function(){
 													$("#yes").animate({opacity:1},function(){
@@ -89,6 +122,7 @@ bloodImg.onload=function(){
 												
 												clearInterval(timer1)
 											}
+
 										},100)
 										
 
