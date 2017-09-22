@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-22 11:24:35
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-22 14:34:14
+* @Last Modified time: 2017-09-22 14:48:50
 */
 body{
 		/*background: url(/images/background-login.png) 0 -20px ;*/
@@ -20,6 +20,7 @@ body{
 		text-align: center;
 		height: 50px;
 		line-height: 50px;
+		color: #fff;
 	}
 
 
