@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-22 14:35:37
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-22 21:06:50
+* @Last Modified time: 2017-09-22 21:28:34
 */
 $(function(){
 
@@ -38,10 +38,20 @@ bloodImg.onload=function(){
 
 		
 
-		console.log("dsfas")
 		var _left=e.clientX;
 		var _top=e.clientY;
-		console.log(_left)
+//canvas2 隐藏  不能获取宽度
+		var maxLeft=document.body.clientWidth-canvas2.width;
+		var maxTop=document.body.clientHeight-canvas2.width;
+
+		console.log(maxLeft,document.body.clientWidth,canvas2.width)
+		if(_left>maxLeft){
+			_left=maxLeft;
+		}
+		if(_top>maxTop){
+			_top=maxTop
+		}
+		// console.log(_left)
 		// ctx.drawImage(bloodImg,_left,_top,100,100)
 		$("#canvas1").css({
 			left:_left,
@@ -62,7 +72,7 @@ bloodImg.onload=function(){
 					clearInterval(timer2)
 				}
 
-			},50)
+			},30)
 	
 	})
 }
