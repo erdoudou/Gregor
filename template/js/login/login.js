@@ -19,7 +19,7 @@ bgImg.onload=function(){
 }
 
 var bloodImg=new Image();
-bloodImg.src="/images/blood.png"
+bloodImg.src="/images/blood 018.png"
 
 
 bloodImg.onload=function(){
