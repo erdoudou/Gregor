@@ -1,0 +1,116 @@
+/*
+* @Author: Administrator
+* @Date:   2017-09-22 11:24:35
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-09-22 14:34:14
+*/
+body{
+		/*background: url(/images/background-login.png) 0 -20px ;*/
+	}
+	
+	.text{
+		width: 500px;
+		height: 150px;
+		border: #fff 1px solid;
+		position: fixed;
+		bottom: 20px;
+		right: 60px;
+	}
+	.text h3{
+		text-align: center;
+		height: 50px;
+		line-height: 50px;
+	}
+
+
+	.text p{
+		text-indent: 30px
+		height: 40px;
+		/*line-height: 40px;*/
+	}
+
+	.text button{
+		position: absolute;
+		bottom: 15px;
+		width: 40px;
+		height: 20px;
+		font-size: 12px;
+		line-height: 20px;
+		border: none;
+		outline: none;
+		/*display: none;*/
+	}
+	.text #yes{
+		right: 80px;
+		background: yellow;
+		opacity: 0;
+	}
+	.text #no{
+		right: 10px;
+		background:red;
+		opacity: 0;
+
+	}
+	.text #show{
+		color: red;
+
+	}
+	.text #show span{
+		opacity: 0;
+	}
+
+
+
+		#login-box{
+			position: fixed;
+			/*top: 0;left: 0;right: 0;bottom: 0;*/
+			/*margin:auto;*/
+			right: 160px;
+			bottom: 200px;
+			border: 1px solid yellow;
+			z-index: 1;
+			width: 300px;
+			height: 200px;
+			background: pink;
+			display: none;
+			opacity: 0;
+
+		}
+		#login-box .login-box-top{
+			border-bottom: 1px solid red;
+			background-color: lightblue;
+			height: 40px;
+			margin-bottom:10px;.
+			position: relative;
+		}
+		#login-box form{
+			padding: 0 15px;
+		}
+		#login-box input{
+			display: block;
+			width: 100%;
+			height: 40px;
+			border-radius: 5px;
+			outline: none;
+			margin-top: 10px;
+			text-indent:15px;
+			border: none;
+
+		}
+
+		#login-box input[type=submit]{
+			background-color: red;
+		}
+
+		#login-box .login-box-top #close{
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			color: #fff;
+			font-size: 18px;
+		}
+
+		#canvas{
+			background-color: #ccc;
+			display: block;
+		}

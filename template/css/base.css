@@ -1,0 +1,19 @@
+/*
+* @Author: Administrator
+* @Date:   2017-09-22 11:24:35
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-09-22 14:06:12
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
