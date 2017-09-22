@@ -8,7 +8,7 @@ $(function(){
 
 			// 图片
 var bgImg=new Image();
-bgImg.src="/images/background-login.png";
+bgImg.src="/images/003_login.png";
 var canvas=document.querySelector("canvas")
 var ctx=canvas.getContext("2d");
 canvas.width=document.body.clientWidth;
