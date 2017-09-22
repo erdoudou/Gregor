@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-22 14:35:37
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-22 14:44:45
+* @Last Modified time: 2017-09-22 16:03:39
 */
 $(function(){
 
@@ -25,6 +25,8 @@ bloodImg.src="/images/blood.png"
 bloodImg.onload=function(){
 	console.log("fdsaf")
 	$("#canvas").click(function(e){
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+		ctx.drawImage(bgImg,0,0,canvas.width,canvas.height)
 		console.log("dsfas")
 		var _left=e.clientX;
 		var _top=e.clientY;
