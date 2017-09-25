@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-22 14:35:37
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-22 21:28:34
+* @Last Modified time: 2017-09-25 13:05:41
 */
 $(function(){
 
@@ -81,7 +81,7 @@ bloodImg.onload=function(){
 
 // - -     -
 		// var str="sadfa"
-		var str="hxj是傻逼a sdf dsfa sdfasdfa sdfasdf assadaf ffffffffffffffffff fffffffff fsdf adsf asd fasdf asdfasdfds afdas  ffffff ffffff ffffffff"
+		var str="hxj是傻逼a ffff"
 		for(var i=0;i<str.length;i++){
 			var span=$("<span>"+str.charAt(i)+"</span>");
 			span.appendTo($("#show"));
