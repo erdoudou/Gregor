@@ -81,7 +81,7 @@ bloodImg.onload=function(){
 
 // - -     -
 		// var str="sadfa"
-		var str="hxj是傻逼a ffff"
+		var str="浓雾弥漫着整个森林，古老的歌谣从树林深处传出，好似呼唤着在路上的人们，陆陆续续的人跋山涉水而来，神色匆匆，消失在一片迷雾之中，渡鸦是不是的飞起，吱吱呀呀的吵着“只进不出，只进不出。。。。“，你是不是赶路的人？赶路的人是不是你？"
 		for(var i=0;i<str.length;i++){
 			var span=$("<span>"+str.charAt(i)+"</span>");
 			span.appendTo($("#show"));

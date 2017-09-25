@@ -9,24 +9,26 @@ body{
 	}
 	
 	.text{
-		width: 500px;
+		width: 800px;
 		height: 150px;
-		border: #fff 1px solid;
+		/*border: #fff 1px solid;*/
 		position: fixed;
-		bottom: 20px;
+		bottom: 7%;
 		right: 0;left: 0;margin: 0 auto;
+		font-family: 华文行楷;
 	}
 	.text h3{
 		text-align: center;
 		height: 50px;
 		line-height: 50px;
-		color: #fff;
+		color: #fff;		
 	}
 
 
 	.text p{
-		text-indent: 30px
+		text-indent: 30px;
 		height: 40px;
+		/*border:1px red solid;*/
 		/*line-height: 40px;*/
 	}
 
@@ -42,14 +44,18 @@ body{
 		/*display: none;*/
 	}
 	.text #yes{
-		right: 80px;
-		background: yellow;
+		right: 120px;
+		/*background: yellow;*/
 		opacity: 0;
+		top: 90%;
+		font-family: 华文行楷;
 	}
 	.text #no{
 		right: 10px;
-		background:red;
+		/*background:red;*/
 		opacity: 0;
+		top: 90%;
+		font-family: 华文行楷;
 
 	}
 	.text #show{
@@ -67,19 +73,19 @@ body{
 			/*top: 0;left: 0;right: 0;bottom: 0;*/
 			/*margin:auto;*/
 			right: 20%;
-			bottom: 300px;
-			border: 1px solid yellow;
+			bottom: 55%;
+			/*border: 1px solid yellow;*/
 			z-index: 1;
 			width: 300px;
 			height: 200px;
-			background: pink;
+			/*background: pink;*/
 			display: none;
 			opacity: 0;
 
 		}
 		#login-box .login-box-top{
-			border-bottom: 1px solid red;
-			background-color: lightblue;
+			/*border-bottom: 1px solid red;*/
+			/*background-color: lightblue;*/
 			height: 40px;
 			margin-bottom:10px;.
 			position: relative;
@@ -96,18 +102,20 @@ body{
 			margin-top: 10px;
 			text-indent:15px;
 			border: none;
+			background-color:rgba(255,255,255,0);
 
 		}
 
 		#login-box input[type=submit]{
-			background-color: red;
+			/*background-color: red;*/
+			background-color:rgba(255,255,255,0);
 		}
 
 		#login-box .login-box-top #close{
 			position: absolute;
 			top: 5px;
 			right: 10px;
-			color: #fff;
+			/*color: #fff;*/
 			font-size: 18px;
 		}
 
