@@ -27,6 +27,7 @@ func loadStaticFile() {
 	http.Handle("/css/", http.FileServer(http.Dir("../../template")))
 	http.Handle("/js/", http.FileServer(http.Dir("../../template")))
 	http.Handle("/images/", http.FileServer(http.Dir("../../template")))
+	http.Handle("/music/", http.FileServer(http.Dir("../../template")))
 }
 
 //加载htmll页面
