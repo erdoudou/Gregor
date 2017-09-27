@@ -19,36 +19,15 @@
 			position: absolute;
 		}
 
-		.nav{
-			position: absolute;
-			color: yellow;
-			width: 100%;
-
-		}
-
-		.nav ul{
-			width: 100%;
-			display: flex;
-			flex: 1;
-		}
-
-		.nav ul li{
-			height: 60px;
-			line-height: 60px;
-			width: 25%;
-			background-color: pink;
-			text-align: center;
-		}	
-		.nav ul li a{
-			display: block;
-			width: 100%;
-			height: 100%;
-			color: yellow;
-		}
-
-		.nav ul li a:hover{
+		#filter{
 			background-color: #fff;
+			position: absolute;
+			top: 0;left: 0;right: 0;bottom: 0;
+			margin: auto;
+			opacity: 0;
 		}
+
+
 		
 		#btn{
 			position: absolute;
@@ -56,13 +35,17 @@
 			left: 12%;
 			top: 25%;
 			width: 200px;
+			z-index: 4
 		}
 
 		#btn ul li{
 			background-color: red;
 			float: left;
-			margin: 5px 8px;
-			display: none;
+			/*margin: 5px 8px;*/
+			/*display: none;*/
+			/*opacity: 0;*/
+			/*visible*/
+			visibility: hidden;
 
 		}
 
@@ -85,14 +68,66 @@
 			padding: 8px;
 		}
 
-		#filter{
-			background-color: #fff;
+		
+
+		.nav{
 			position: absolute;
-			top: 0;left: 0;right: 0;bottom: 0;
-			margin: auto;
-			opacity: 0.4;
+			right: 20px;
+			color: yellow;
+			width: 60%;
+			z-index: 3;
+			background-color: lightblue;
+		}
+		.nav .nav-left{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			float: left;
+			/*background-color: red;*/
+			margin: 5px 10px;
+			/*background: url(/images/head.jpg);*/
+		}
+
+		.nav .nav-left img{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+
+		.nav ul{
+			float: left;
+			width: 90%;
+			display: flex;
+			flex: 1;
+		}
+
+		.nav ul li{
+			height: 60px;
+			line-height: 60px;
+			width: 25%;
+			background-color: pink;
+			text-align: center;
+		}	
+		.nav ul li a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: yellow;
+		}
+
+		.nav ul li a:hover{
+			background-color: #fff;
 		}
 		
+
+		#tone{
+			width: 300px;
+			height: 100px;
+			/*background-color: gold;*/
+			position: absolute;
+			left: 50px;
+			bottom: 20px;
+		}
 
 	</style>
 </head>
@@ -101,7 +136,11 @@
 		
 	</div -->
 	<canvas id="canvas"></canvas>
+	<canvas id="tone"></canvas>
 	<nav class="nav">
+		<div class="nav-left">
+			<img src="/images/head.jpg" alt="">
+		</div>
 		<ul>
 			<li><a href="">hxj1</a></li>
 			<li><a href="">hxj1</a></li>
@@ -129,7 +168,7 @@
 			<li><a href="">吖吖</a></li>
 		</ul>
 	</nav>
-	<div id="filter"></div>
+	<!-- <div id="filter"></div> -->
 	<div class="text-box">
 		dsfafa
 	</div>
@@ -151,72 +190,69 @@
 		img.onload=function(){
 			ctx.drawImage(img,0,0,canvas.width,canvas.height)
 
-			setInterval(function(){
-				$("#filter").fadeToggle(4000,"linear")
+			setTimeout(function(){
+				$("#filter").animate({
+					opacity:0.4
+				},4000,function(){
+					setInterval(function(){
+						$("#filter").fadeToggle(4000,"linear")
+					},1000)
+				})
 			},1000)
+			
 
 			//#btn
 			var _li=$("#btn ul li");
-
-			// for(var i=0;i<_li.length;i++){
-				
-			// 	setTimeout(function(){
-			// 		console.log()
-			// 		console.log("hello",that)
-			// 		$(that).css("display","block");
-			// 	},500*num)
-			// }
 			var n=0;
+			// for(var )
+			setInterval(function(){
+				$(_li[n]).css("visibility","visible").siblings().css("visibility","none");
+				n++;
+				if(n==_li.length){
+					n=0;
+				}
+			},500)
+			
 
-				$(_li[0]).fadeIn("slow",function(){
-					$(_li[1]).fadeIn("slow",function(){
-						$(_li[2]).fadeIn("slow",function(){
-						$(_li[3]).fadeIn("slow",function(){
-						$(_li[4]).fadeIn("slow",function(){
-						$(_li[5]).fadeIn("slow",function(){
-						$(_li[6]).fadeIn("slow",function(){
-						$(_li[7]).fadeIn("slow",function(){
-						$(_li[8]).fadeIn("slow",function(){
-						$(_li[9]).fadeIn("slow",function(){
-						$(_li[10]).fadeIn("slow",function(){
-						$(_li[11]).fadeIn("slow",function(){
-						$(_li[12]).fadeIn("slow",function(){
-						$(_li[13]).fadeIn("slow",function(){
-						$(_li[14]).fadeIn("slow",function(){
-						$(_li[15]).fadeIn("slow",function(){
-							//.
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-
-						})
-					})
-
-
-				})
 				
+			// tone
+			var canvas2=document.querySelector("#tone");
+			var ctx2=canvas2.getContext("2d");
+			var blood3=new Image();
+			blood3.src="/images/blood3.png"
+
+			var blood2=new Image();
+			blood2.src="/images/blood2.png"
+
+			var blood4=new Image();
+			blood4.src="/images/blood4.png"
+
+			blood3.onload=function(){
+				var j=0;
+			var timer2=setInterval(function(){
+					ctx2.drawImage(blood3,0,j*1,100,100)
+					j++;
+					if(j>150){
+						clearInterval(timer2)
+					}
+				},100)
+
+			}
+			blood2.onload=function(){
+				var k=0;
+				var timer3=setInterval(function(){
+						ctx2.drawImage(blood2,100,k*5,100,100)
+						k++;
+						if(k>150){
+							clearInterval(timer3)
+						}
+					},100)
+							
+						}
+			blood4.onload=function(){
+							ctx2.drawImage(blood4,200,0,100,100)
+						}
+
 			
 
 		}
