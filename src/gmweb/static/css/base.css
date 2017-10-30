@@ -1,0 +1,115 @@
+.login_form{
+	border:1px solid #AAA;
+	width:350px;
+	height:200px;
+	margin-top:200px;
+	margin-left:41%;
+	font-size:25px;
+	font-family:微软雅黑;
+}
+
+.login_tab{
+	margin-top:20px;
+	margin-left:30px;
+}
+
+.login_btn{
+	font-size:25px;
+	font-family:微软雅黑;
+	margin-top:28px;
+	margin-left:130px;
+	width:100px;	
+}
+
+.span_div{
+	font-size:25px;
+	font-family:微软雅黑;
+	margin-top:50px;
+}
+
+.lookdot_a{
+	margin-left:22%;
+}
+
+.span_a{
+	margin-left:25px;
+}
+
+.register_form{
+	border:1px solid #AAA;
+	width:350px;
+	height:200px;
+	font-size:25px;
+	font-family:微软雅黑;
+	margin-top:50px;
+}
+
+.register_tab{
+	margin-top:20px;
+	margin-left:15px;
+}
+
+.register_btn{
+	font-size:25px;
+	font-family:微软雅黑;
+	margin-top:25px;
+	margin-left:60px;
+	width:200px;	
+}
+
+.goto_home{
+	margin-left:90%;
+	font-size:15px;
+}
+
+.findItem_div{
+	margin-top:30px;
+	margin-left:37%;
+}
+
+.lookItem_tr{
+	font-size:20px;
+	font-family:微软雅黑;
+}
+
+.itemUid_td{
+	width:200px;
+}
+
+.itemTempid_td{
+	width:200px;
+}
+
+.name_text{
+	height:25px;
+	width:200px;
+	font-size:20px;
+}
+
+.lookItem_but{
+	width:200px;
+	font-size:20px;
+	margin-left:20px;
+	height:35px;
+}
+
+.addItem_div{
+	margin-top:50px;
+	margin-left:37%;
+	font-family:微软雅黑;
+}
+
+.addItem_btn{
+	margin-top:20px;
+	font-size:20px;
+	width:150px;
+}
+
+.nacigationBar{
+	margin-left:65%;
+	font-size:18px;
+}
+
+.bar_span{
+	margin-left:50px;
+}

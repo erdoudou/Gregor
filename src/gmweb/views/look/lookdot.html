@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>lookdotPage</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="/static/js/jquery.js" ></script>
+		<script type="text/javascript" src="/static/js/md5.js" ></script>
+		<script type="text/javascript" src="/static/js/base.js" ></script>
+		<link rel="stylesheet" href="/static/css/base.css">
+    </head>
+
+    <body>
+	<span class="goto_home"><a a href="/home">跳转回主页</a></span>
+        <header class="hero-unit" style="background-color:#A9F16C">
+            <div>
+			<form onsubmit = "return lookdot();" >
+			<p>这个页面是查看玩家科技点页面</p>
+			<input type="text" required="true" id = "playerid" name="playername" missingMessage="请输入玩家的名字"/>
+			<input type="submit" value="查看该玩家的科技点">
+			<form>
+			</div>
+        </header>
+    </body>
+</html>

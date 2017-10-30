@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>loginPage</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="/static/js/jquery.js" ></script>
+		<script type="text/javascript" src="/static/js/md5.js" ></script>
+		<script type="text/javascript" src="/static/js/base.js" ></script>
+		<link rel="stylesheet" href="/static/css/base.css">
+    </head>
+
+    <body style="background-color: #C0C0C0;"> 
+		<h1 style="text-align:center;">玩家登陆页面</h1>      
+		<div>			
+			<form class="login_form">
+				<table class="login_tab">
+				    <tr>
+				        <td>用户名：</td><td><input type="text" required="true" id = "userid" name="username" missingMessage="请输入用户名"/></td>
+				    </tr>
+					
+				    <tr>
+				        <td>密码：</td><td><input type="password" required="true" id = "passid" name="password" missingMessage="请输入密码"/></td>
+				    </tr>					
+				</table>
+				<input class="login_btn" type="button" value="登录" onclick="checkUser();"/>
+			</form>
+		</div>
+       
+    </body>
+</html>

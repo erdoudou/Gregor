@@ -1,0 +1,26 @@
+[
+	{
+		"BoxTempID":100,
+		"NeedTime":"2,10",
+		"ItemTempIds":"50001,60001,70001",
+		"ItemWeight":"20,20,20",
+		"ItemPrice":20,
+		"ItemDescribe":"这是一颗逍遥丸"
+	},
+	{
+		"BoxTempID":200,
+		"NeedTime":"2,10",
+		"ItemTempIds":"10,100,200",
+		"ItemWeight":"10,100,200",
+		"ItemPrice":20,
+		"ItemDescribe":"这是一颗逍遥丸"
+	},
+	{
+		"BoxTempID":80001,
+		"NeedTime":"2,10",
+		"ItemTempIds":"1,10001,20001,30001,40001,50001,60001,70001",
+		"ItemWeight":"20,20,20,20,20,20,20,20",
+		"ItemPrice":20,
+		"ItemDescribe":"这是一颗逍遥丸"
+	}
+]

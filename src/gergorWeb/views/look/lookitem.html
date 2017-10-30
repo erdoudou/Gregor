@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>lookitemPage</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="/static/js/jquery.js" ></script>
+		<script type="text/javascript" src="/static/js/md5.js" ></script>
+		<script type="text/javascript" src="/static/js/base.js" ></script>
+		<link rel="stylesheet" href="/static/css/base.css">
+    </head>
+
+    <body style="background-color: #C0C0C0;">
+	<div class="nacigationBar">
+		<span><a href="/lookdot">查看玩家科技点</a></span>
+		<span class="bar_span"><a href="/additem">增加物品给某个玩家</a></span>
+		<span class="bar_span"><a a href="/home">跳转回主页</a></span>
+		<span class="bar_span"><a href="/logout">用户退出</a></span>
+	</div>
+	<h1 style="text-align:center;">这个页面是查看玩家物品信息页面</h1>
+        <div class="findItem_div">
+			<p>请输入想查找玩家的steam昵称</p>						
+			<input class="name_text" type="text" required="true" id = "playerid" name="playername" missingMessage="请输入玩家的名字"/>			
+			<p>请输入想查找玩家物品的模板id(筛选条件框可以输入值，也可以不输入值)</p>
+			<input class="name_text" type="text" required="false" id = "itemtempid"/>
+			<input class="lookItem_but" type="button" value="查看玩家物品信息" onclick="lookitem();"  />			
+		
+			<p>玩家物品信息:</p>
+			<table id = "project">
+				<thead>
+					<tr class="lookItem_tr">
+					    <td class="itemUid_td">玩家物品的uid</td>
+						<td class="itemTempid_td">玩家物品的模板id</td>
+						<td>操作</td>
+					</tr> 
+				</thead>
+				<tbody></tbody>  			
+	       		 			   			     
+			</table>
+		</div>		
+    </body>
+</html>

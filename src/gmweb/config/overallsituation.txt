@@ -1,0 +1,6 @@
+{
+	"MaxBoxSlots":64,
+	"SciencedotNum":1,
+	"MaxBagSlots":128,
+	"LevelUpSciencedot":2
+}

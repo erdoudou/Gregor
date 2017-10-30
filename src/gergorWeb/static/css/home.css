@@ -1,0 +1,106 @@
+.box{
+	width: 100%;
+	height: 100px;
+	background-color: yellow;
+}
+canvas{
+	/*background: red;*/
+	display: block;
+	position: absolute;
+}
+#filter{
+	background-color: #fff;
+	position: absolute;
+	top: 0;left: 0;right: 0;bottom: 0;
+	margin: auto;
+	opacity: 0;
+}		
+#btn{
+	position: absolute;
+	/*background-color: lightblue;*/
+	left: 12%;
+	top: 25%;
+	width: 200px;
+	z-index: 4
+}
+#btn ul li{
+	background-color: gray;
+	float: left;
+	/*margin: 5px 8px;*/
+	/*display: none;*/
+	/*opacity: 0;*/
+	/*visible*/
+	visibility: hidden;
+}
+#btn ul li a{
+	text-align: center;
+	padding: 5px 8px;
+	color: blue;
+
+}
+.text-box{
+	/*border: 1px solid gray;*/
+	width: 600px;
+	height: 200px;
+	position: absolute;
+	right: 100px;
+	bottom: 37%;
+	color: #fff;
+	text-indent: 20px;
+	padding: 8px;
+	font-family: 方正舒体;
+	color: gray;
+}
+.nav{
+	position: absolute;
+	/*right: 20%;*/
+	color: yellow;
+	width: 100%;
+	z-index: 3;
+	background-color: gray;
+}
+.nav .nav-left{
+	width: 50px;
+	height: 40px;
+	border-radius: 50%;
+	float: left;
+	/*background-color: red;*/
+	margin: 5px 10px;
+	/*background: url(/images/head.jpg);*/
+}
+.nav .nav-left img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.nav ul{
+	float: left;
+	width: 90%;
+	display: flex;
+	flex: 1;
+	font-family: 方正舒体;
+}
+.nav ul li{
+	height: 50px;
+	line-height: 60px;
+	width: 25%;
+	/*background-color: pink;*/
+	text-align: center;
+}	
+.nav ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: black;
+}
+.nav ul li a:hover{
+	background-color: #fff;
+}		
+#tone{
+	width: 300px;
+	height: 100px;
+	/*background-color: gold;*/
+	position: absolute;
+	left: 50px;
+	bottom: 20px;
+}

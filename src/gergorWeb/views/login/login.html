@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/static/css/base.css">
+	<link rel="stylesheet" href="/static/css/login.css">
+	<script type="text/javascript" src="/static/js/jquery.js"></script>
+	<script type="text/javascript" src="/static/js/login/login.js"></script>
+	<script type="text/javascript" src="/static/js/md5.js" ></script>
+	<script type="text/javascript" src="/static/js/base.js" ></script>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	
+	<canvas id="canvas1" width="100" height="100"></canvas>
+	<canvas id="canvas2" width="100" height="100"></canvas>
+
+	<div class="text">
+		<h3>生死状</h3>
+		<p id="show">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			
+		</p>
+		<button id="yes">同意</button>
+		<button id="no">不同意</button>
+		
+		
+	</div>
+	
+	<div id="login-box">
+		<div class="login-box-top">
+			<span id="close">×</span>
+		</div>
+		<form>
+			<table>
+			    <tr>
+			        <td>用户名：</td><td><input type="text" required="true" id = "userid" name="username" missingMessage="请输入用户名"/></td>
+			    </tr>
+				
+			    <tr>
+			        <td>密码：</td><td><input type="password" required="true" id = "passid" name="password" missingMessage="请输入密码"/></td>
+			    </tr>					
+			</table>
+			<input type="button" value="登录" onclick="checkUser();"/>
+		</form>
+	</div>
+
+	
+	
+</body>
+</html>
