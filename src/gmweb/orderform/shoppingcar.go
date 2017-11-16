@@ -9,7 +9,7 @@ import (
 	//"com/ViKing/FPSDemo/protobuf/goBin"
 	json "encoding/json"
 	"fmt"
-	"gergorWeb/item"
+	"gmweb/item"
 	"io/ioutil"
 	"net"
 	"net/http"

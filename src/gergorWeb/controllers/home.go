@@ -9,11 +9,13 @@ type HomeController struct {
 }
 
 func (c *HomeController) Get() {
+	fmt.Println("跳转到主页")
 	if !c.isLogin {
-		c.Redirect("/login", 302)
 		fmt.Println("没有登录")
+		c.Redirect("/login", 302)
 		return
 	}
+	fmt.Println("已经正常登陆")
 	c.TplName = "home/home.html"
 
 }

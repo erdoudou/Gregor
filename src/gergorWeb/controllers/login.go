@@ -3,9 +3,6 @@ package controllers
 import (
 	"Public/db"
 	"fmt"
-
-	//"github.com/astaxie/beego"
-	//"github.com/astaxie/beego/utils/pagination"
 )
 
 type user struct {

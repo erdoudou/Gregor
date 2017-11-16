@@ -114,7 +114,7 @@ func deleteBagItem(itemUid, playername string) bool {
 
 	updateCmd := "UPDATE backpack SET itemslots=? WHERE useruid= (SELECT globaluid FROM accountconvert WHERE username=?)"
 
-	fmt.Println("更新背包物品============", itemContent)
+	fmt.Println("更新宝箱物品============", itemContent)
 
 	db.ExecUpdate(idchan1, reschan1, updateCmd,
 		itemContent, playername)

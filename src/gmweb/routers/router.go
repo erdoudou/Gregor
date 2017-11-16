@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"gergorWeb/controllers"
+	"gmweb/controllers"
 
 	"github.com/astaxie/beego"
 )
@@ -18,6 +18,7 @@ func init() {
 
 	beego.Router("/lookitem", &controllers.LookitemController{})
 	beego.Router("/additem", &controllers.AdditemController{})
+	beego.Router("/lookbox", &controllers.LookBoxController{})
 
 	beego.Router("/logout", &controllers.LogoutController{})
 }

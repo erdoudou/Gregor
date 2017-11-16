@@ -3,9 +3,6 @@ package controllers
 import (
 	"Public/db"
 	"fmt"
-
-	//"github.com/astaxie/beego"
-	//"github.com/astaxie/beego/utils/pagination"
 )
 
 type user struct {
@@ -18,6 +15,7 @@ type LoginController struct {
 }
 
 func (c *LoginController) Get() {
+	fmt.Println("进入登录页面")
 	c.TplName = "login/login.html"
 
 }

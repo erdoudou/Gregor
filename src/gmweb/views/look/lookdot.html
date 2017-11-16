@@ -8,18 +8,29 @@
 		<script type="text/javascript" src="/static/js/md5.js" ></script>
 		<script type="text/javascript" src="/static/js/base.js" ></script>
 		<link rel="stylesheet" href="/static/css/base.css">
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
     </head>
 
-    <body>
-	<span class="goto_home"><a a href="/home">跳转回主页</a></span>
-        <header class="hero-unit" style="background-color:#A9F16C">
-            <div>
-			<form onsubmit = "return lookdot();" >
-			<p>这个页面是查看玩家科技点页面</p>
-			<input type="text" required="true" id = "playerid" name="playername" missingMessage="请输入玩家的名字"/>
-			<input type="submit" value="查看该玩家的科技点">
-			<form>
-			</div>
-        </header>
-    </body>
+    <body style="background-color: #C0C0C0;">
+	<p></p>
+	<div class="nacigationBar">
+		<span class="bar_span"><a href="/lookitem">查看玩家物品信息</a></span>
+		<span class="bar_span"><a href="/additem">增加物品给某个玩家</a></span>
+		<span class="bar_span"><a a href="/home">跳转回主页</a></span>
+		<span class="bar_span"><a a href="/lookbox">查看玩家宝箱信息</a></span>
+		<span class="bar_span"><a href="/logout">用户退出</a></span>
+		<br/>
+	</div>
+	<p></p>
+	<h1 style="text-align:center;">这个页面是查看玩家科技点信息页面</h1>
+    <div class="findItem_div">
+		<p>请输入想查找玩家的steam昵称</p>						
+		<input class="name_text" type="text" required="true" id = "playerid" name="playername" missingMessage="请输入玩家的名字"/>	
+		<input class="lookBox_but" type="button" value="查看玩家科技点信息" onclick="lookdot();"  />	
+		<p>玩家物品信息:</p>
+		<input class="name_text" type="text" id = "playerdot" name="playerdot"/>
+		<input class="lookBox_but" type="button" value="修改玩家科技点" onclick="changedot();"  />	
+		
+	</div>		
+</body>
 </html>

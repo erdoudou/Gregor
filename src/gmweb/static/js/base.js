@@ -183,3 +183,106 @@ function registerUser(){
 	});
 }
 
+function lookbox(){	
+   	var playername = document.getElementById("playerid").value;	
+
+   	if(playername == ""  ){
+     	alert("用户名不能为空");
+     	return false;
+   	}
+	$("#project tbody").html("");
+
+	$.ajax({
+		async:true,
+		url:'/lookbox',
+		type:"POST",       
+        data: {playername:playername},
+		dataType:"json",
+		success: function(msg){
+			if (msg.code==0){
+				alert("该玩家没有物品数据");
+				return;
+			}
+			var tbody = "";
+			//var butDelitem='<td><a href="#" onclick="delboxuid(this);">删除</a></td>';					
+			$.each(msg,function(index,value){
+        		console.log("下标:"+index+"值:"+value.Boxuid);
+				var trs = "";
+				trs += "<tr><td>" + value.Boxuid + "</td> <td>" + value.Boxtempid + "</td>"+"<td>不能私自删除宝箱</td>"+"</tr>";
+				tbody += trs;
+    		});
+			$("#project").append(tbody);
+		}
+	});
+}
+
+function delboxuid(obj){
+	var boxuid = $(obj).parents("tr").children("td").eq(0).text();	
+	var playername = document.getElementById("playerid").value;	
+  	$.ajax({
+		async:true,
+		url:'/lookbox',
+		type:"POST",       
+        data: {boxuid:boxuid,playername:playername},
+		dataType:"json",
+		success: function(msg){
+			if (msg.code==1){
+				$(obj).parents("tr").remove();
+				alert("删除物品成功");
+			}else{
+				alert(msg.message);
+			}
+		}
+	});	
+}
+
+function lookdot(){	
+   	var playername = document.getElementById("playerid").value;	
+
+   	if(playername == ""  ){
+     	alert("用户名不能为空");
+     	return false;
+   	}
+
+	$.ajax({
+		async:true,
+		url:'/lookdot',
+		type:"POST",       
+        data: {playername:playername},
+		dataType:"json",
+		success: function(msg){
+			if (msg.code==0){
+				alert("该玩家没有物品数据");
+				return;
+			}
+			console.log(msg.dot);
+			$("#playerdot").val(msg.dot);
+		}
+	});
+}
+
+
+function changedot(){	
+   	var playername = document.getElementById("playerid").value;
+	var playerdot = document.getElementById("playerdot").value;	
+
+   	if(playername == ""||playerdot == ""){
+     	alert("用户名不能为空");
+     	return false;
+   	}
+
+	$.ajax({
+		async:true,
+		url:'/lookdot',
+		type:"POST",       
+        data: {playername:playername,playerdot:playerdot},
+		dataType:"json",
+		success: function(msg){
+			if (msg.code==0){
+				alert(msg.message);
+				return;
+			}
+			alert("修改玩家科技点成功");
+		}
+	});
+}

@@ -67,30 +67,21 @@
 	margin-left:37%;
 }
 
-.lookItem_tr{
-	font-size:20px;
-	font-family:微软雅黑;
-}
-
-.itemUid_td{
-	width:200px;
-}
-
-.itemTempid_td{
-	width:200px;
+.lookitem_table{
+	width:50%;
 }
 
 .name_text{
+	margin-top:4px;	
 	height:25px;
 	width:200px;
 	font-size:20px;
 }
 
 .lookItem_but{
-	width:200px;
 	font-size:20px;
 	margin-left:20px;
-	height:35px;
+	height:30px;
 }
 
 .addItem_div{
@@ -106,10 +97,17 @@
 }
 
 .nacigationBar{
-	margin-left:65%;
+	margin-top:20px;
+	margin-left:60%;
 	font-size:18px;
 }
 
 .bar_span{
 	margin-left:50px;
+}
+
+.lookBox_but{
+	font-size:20px;
+	margin-left:20px;
+	height:30px;
 }
