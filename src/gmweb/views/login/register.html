@@ -8,15 +8,36 @@
 		<script type="text/javascript" src="/static/js/md5.js" ></script>
 		<script type="text/javascript" src="/static/js/base.js" ></script>
 		<link rel="stylesheet" href="/static/css/base.css">
+		<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     </head>
 
-    <body style="background-color: #C0C0C0;">
-	<div class="nacigationBar">
-		<span><a href="/lookdot">查看玩家科技点</a></span>
-		<span class="bar_span"><a href="/additem">增加物品给某个玩家</a></span>		
-		<span class="bar_span"><a a href="/home">跳转回主页</a></span>
-		<span class="bar_span"><a href="/logout">用户退出</a></span>
-	</div>
+    <body background = "/static/img/login.gif">
+		<div class="header sticky-header">
+	        <div class="row">
+	            <div class="col-md-2 col-sm-2 col-xs-4">
+	                <div class="logoimg"><a href="index.html"><img src="/static/img/logo.png" alt=""></a></div>
+	            </div>
+	            <div class="col-md-9 col-sm-8 col-xs-4">                    
+	                <div class="header-right">
+	                    <div class="header-menu hidden-sm hidden-xs">
+	                        <div class="menu">
+	                            <ul>
+						<li class="li_a"><a href="/register">新添管理用户</a></li>
+	                                <li class="li_a"><a href="/lookdot">查看玩家科技点</a></li>
+	                                <li class="li_a"><a href="/lookitem">查看玩家物品信息</a></li>
+	                                <li class="li_a"><a href="/additem">增加物品给某个玩家</a></li>
+	                                <li class="li_a"><a href="/lookbox">查看玩家宝箱信息</a></li>
+	                            </ul>
+	                        </div>
+	                    </div>	
+	                </div>
+	            </div>
+				<div class="col-md-1 col-sm-2 col-xs-4">
+					<a class ="logout_a" href="/logout">logout</a>
+				</div>							
+	    	</div>		
+	    </div>
     <h1>该页面为添加用户页面，只能添加一般权限的用户，假如要修改权限的话，请联系开发人员</h1>    
 		<div>		
 			<p>下面为注册的用户的账号名字和密码</p>

@@ -6,20 +6,51 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<!--<script type="text/javascript" src="/static/js/jquery.js" ></script>-->
 		<link rel="stylesheet" href="/static/css/base.css">
+		<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     </head>
 
-    <body style="background-color: #C0C0C0;">
-	<h1 style="text-align:center;">主页面</h1>       
-		<div class="span_div">				
-       		<span class="lookdot_a"><a href="/register">新添管理用户</a></span>
-			<span class="span_a"><a href="/lookdot">查看玩家科技点</a></span>
-			<span class="span_a"><a href="/lookitem">查看玩家物品信息</a></span>
-			<span class="span_a"><a href="/additem">增加物品给某个玩家</a></span>
-			<span class="span_a"><a href="/lookbox">查看玩家宝箱信息</a></span>
-			<span class="span_a"><a href="/logout">用户退出</a></span>
-		</div>
-			
-			
-        
+    <body background = "/static/img/login.gif">
+		<div class="header sticky-header">
+	        <div class="row">
+	            <div class="col-md-2 col-sm-2 col-xs-4">
+	                <div class="logoimg"><a href="index.html"><img src="/static/img/logo.png" alt=""></a></div>
+	            </div>
+	            <div class="col-md-9 col-sm-8 col-xs-4">                    
+	                <div class="header-right">
+	                    <div class="header-menu hidden-sm hidden-xs">
+	                        <div class="menu">
+	                            <ul>
+									<li class="li_a"><a href="/register">新添管理用户</a></li>
+	                                <li class="li_a"><a href="/lookdot">查看玩家科技点</a></li>
+	                                <li class="li_a"><a href="/lookitem">查看玩家物品信息</a></li>
+	                                <li class="li_a"><a href="/additem">增加物品给某个玩家</a></li>
+	                                <li class="li_a"><a href="/lookbox">查看玩家宝箱信息</a></li>
+	                            </ul>
+	                        </div>
+	                    </div>	
+	                </div>
+	            </div>
+				<div class="col-md-1 col-sm-2 col-xs-4">
+					<a class ="logout_a" href="/logout">logout</a>
+				</div>							
+	    	</div>		
+	    </div>
+		
+		<div class="container">
+            <h2 class="section-heading">gm工具----by:erdoudou</h2>               
+            <div>
+                <a href="#"><img src="/static/img/002.jpg" style="width:100%;height:600px;"></a>
+                <h3 class="news-title"><a href="#">运营gm工具</a></h3>
+                <p>该工具主要提供功能为：查看和修改玩家的科技点，查看额删除玩家的物品，增加某个物品给某个玩家，以及查看玩家的宝箱信息，以上功能的搜索依据是玩家的steam账号昵称，请正确的输入玩家的昵称</p>
+				<p>注意事项：进行gm工具提供的所有功能需要保证你修改的玩家不在线该游戏，如果玩家在线进行修改将不能成功</p>
+				<p>如果您需要新添管理账号请找相关人员确认，否则将没有权限进行操作。该网站如果出现任何的问题请联系管理员二斗斗</p>
+                <div class="news-meta">
+                    <span>2017.11.01</span>
+                    <span style="margin-left:50%;">by----erdoudou</span>
+                </div>
+            </div>
+                   
+        </div>      
     </body>
 </html>

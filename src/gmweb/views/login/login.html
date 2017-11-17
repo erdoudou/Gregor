@@ -10,21 +10,24 @@
 		<link rel="stylesheet" href="/static/css/base.css">
     </head>
 
-    <body style="background-color: #C0C0C0;"> 
-		<h1 style="text-align:center;">玩家登陆页面</h1>      
-		<div>			
-			<form class="login_form">
-				<table class="login_tab">
-				    <tr>
-				        <td>用户名：</td><td><input type="text" required="true" id = "userid" name="username" missingMessage="请输入用户名"/></td>
-				    </tr>
-					
-				    <tr>
-				        <td>密码：</td><td><input type="password" required="true" id = "passid" name="password" missingMessage="请输入密码"/></td>
-				    </tr>					
-				</table>
-				<input class="login_btn" type="button" value="登录" onclick="checkUser();"/>
-			</form>
+    <body background = "/static/img/login.gif">   
+		<h1 style="margin-top:100px;margin-left:47%;">玩家登陆页面</h1>      
+		<div class="login_boder">
+			<div class="login_padding">	
+				<h2>USERNAME</h2>
+	  			<label>
+	    			<input type="text" class="txt_input txt_input2" required="true" id = "userid" name="username" missingMessage="请输入用户名"/>
+	  			</label>
+	  			<h2>PASSWORD</h2>
+	  			<label>
+	    			<input type="password" class="txt_input" required="true" id = "passid" name="password" missingMessage="请输入密码"/>
+	  			</label>
+				<br/>
+				<label>
+					<input type="button" class ="sub_button" value="登录" onclick="checkUser();"/>
+				</label>						
+								
+			</div>
 		</div>
        
     </body>
