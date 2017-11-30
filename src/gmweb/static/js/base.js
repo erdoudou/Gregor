@@ -23,14 +23,10 @@ function checkUser(){
         data: {username:username, password:passwordMd5},
 		dataType:"json",
 		success: function(msg){
-			//alert(msg.code);
 			if (msg.code == 1) {
-				//alert("222222222");
-				//location.href = "home.html";
-				//setTimeout(function(){window.location.href='/home'}, 2000);
 				window.location.href='/home';
             } else {
-				//alert("登录失genb"); 
+				alert(msg.message);
 				window.location.href='/login';                      
             }
 		}

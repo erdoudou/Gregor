@@ -14,47 +14,53 @@
 
     <body background = "/static/img/login.gif">
 		<div class="header sticky-header">
-	        <div class="row">
-	            <div class="col-md-2 col-sm-2 col-xs-4">
-	                <div class="logoimg"><a href="index.html"><img src="/static/img/logo.png" alt=""></a></div>
-	            </div>
-	            <div class="col-md-9 col-sm-8 col-xs-4">                    
-	                <div class="header-right">
-	                    <div class="header-menu hidden-sm hidden-xs">
-	                        <div class="menu">
-	                            <ul>
-						<li class="li_a"><a href="/register">新添管理用户</a></li>
-	                                <li class="li_a"><a href="/lookdot">查看玩家科技点</a></li>
-	                                <li class="li_a"><a href="/lookitem">查看玩家物品信息</a></li>
-	                                <li class="li_a"><a href="/additem">增加物品给某个玩家</a></li>
-	                                <li class="li_a"><a href="/lookbox">查看玩家宝箱信息</a></li>
-	                            </ul>
-	                        </div>
-	                    </div>	
-	                </div>
-	            </div>
-				<div class="col-md-1 col-sm-2 col-xs-4">
-					<a class ="logout_a" href="/logout">logout</a>
-				</div>							
-	    	</div>		
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-3 col-sm-2 col-xs-4">
+		                <div class="logoimg"><a href="index.html"><img src="/static/img/logo.png" alt=""></a></div>
+		            </div>
+		            <div class="col-md-8 col-sm-8 col-xs-4">                    
+		                <div class="header-right">
+		                    <div class="header-menu hidden-sm hidden-xs">
+		                        <div class="menu">
+		                            <ul>
+										<li class="li_a_one"><a href="/home">返回home</a></li>
+		                                <li class="li_a"><a href="/lookdot">查看科技点</a></li>
+		                                <li class="li_a"><a href="/lookitem">查看物品</a></li>
+		                                <li class="li_a"><a href="/additem">增加物品</a></li>
+		                                <li class="li_a"><a href="/lookbox">查看宝箱</a></li>
+		                            </ul>
+		                        </div>
+		                    </div>	
+		                </div>
+		            </div>
+					<div class="col-md-1 col-sm-2 col-xs-4">
+						<a class ="logout_a" href="/logout">logout</a>
+					</div>							
+		    	</div>
+			</div>		
 	    </div>
-    <h1>该页面为添加用户页面，只能添加一般权限的用户，假如要修改权限的话，请联系开发人员</h1>    
-		<div>		
-			<p>下面为注册的用户的账号名字和密码</p>
-			<form class="register_form">
-				<table class="register_tab">
-				    <tr>
-				        <td>用户名：</td><td><input type="text" required="true" id = "userid" name="username" missingMessage="请输入用户名"/></td>
-				    </tr>
-				    <tr>
-				        <td>密码：</td><td><input type="password" required="true" id = "passid" name="password" missingMessage="请输入密码"/></td>
-				    </tr>
-					<tr>
-						<td>确认密码：</td><td><input type="password" required="true" id = "surePwd" name="surePwd" missingMessage="请输入确认密码"/></td>
-					</tr>
-				</table>
-				<input class="register_btn" type="button" value="添加新的用户" onclick="registerUser();"/>
-			</form>
-		</div>       
+    	<h3>注意事项：该页面为添加管理员页面，管理员分有权限，不同的管理员拥有不同的操作权限，该页面添加的管理员为一般管理权限</h3> 
+		<div class="login_boder">
+			<div class="login_padding">	
+				<p>管理员名</p>
+	  			<label>
+	    			<input type="text" required="true" id = "userid" name="username" missingMessage="请输入用户名"/>
+	  			</label>
+	  			<p>密码</p>
+	  			<label>
+					<input type="password"  required="true" id = "passid" name="password" missingMessage="请输入密码"/>
+	  			</label>
+				<p>确认密码</p>
+	  			<label>
+					<input type="password" required="true" id = "surePwd" name="surePwd" missingMessage="请输入确认密码"/>
+	  			</label>
+				<br/>
+				<label>
+					<input class="sub_button" type="button" value="添加管理员" onclick="registerUser();"/>
+				</label>						
+								
+			</div>
+		</div>     
     </body>
 </html>

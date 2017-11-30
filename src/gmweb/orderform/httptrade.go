@@ -101,7 +101,7 @@ func AddItemIntosteam(steamuserid string, itemarray string, delItemID int64, ite
 
 	form := url.Values{}
 	form.Set("key", "DCD9C36F1F54A96F707DFBE833600167")
-	form.Set("appid", "511600")
+	form.Set("appid", "675310")
 	form.Set("steamid", steamuserid) //76561198382627854
 
 	/*for index, itemtemid := range itemarray {

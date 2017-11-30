@@ -84,7 +84,7 @@ func CreatShopcarIntosteam(steamuserid string, orderid int64, itemid int, amount
 	form.Set("key", "DCD9C36F1F54A96F707DFBE833600167")
 	form.Set("orderid", strconv.Itoa(int(orderid)))
 	form.Set("steamid", steamuserid)
-	form.Set("appid", "511600")
+	form.Set("appid", "675310")
 	form.Set("itemcount", "1")
 	form.Set("language", "EN")
 	form.Set("currency", "USD")

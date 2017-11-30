@@ -10,25 +10,206 @@
 		<link rel="stylesheet" href="/static/css/base.css">
     </head>
 
-    <body background = "/static/img/login.gif">   
-		<h1 style="margin-top:100px;margin-left:47%;">玩家登陆页面</h1>      
-		<div class="login_boder">
-			<div class="login_padding">	
-				<h2>USERNAME</h2>
-	  			<label>
-	    			<input type="text" class="txt_input txt_input2" required="true" id = "userid" name="username" missingMessage="请输入用户名"/>
-	  			</label>
-	  			<h2>PASSWORD</h2>
-	  			<label>
-	    			<input type="password" class="txt_input" required="true" id = "passid" name="password" missingMessage="请输入密码"/>
-	  			</label>
-				<br/>
-				<label>
-					<input type="button" class ="sub_button" value="登录" onclick="checkUser();"/>
-				</label>						
-								
-			</div>
+    <head>
+	<meta charset="UTF-8">
+	<title>loginPage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="/static/js/jquery.js" ></script>
+	<script type="text/javascript" src="/static/js/md5.js" ></script>
+	<script type="text/javascript" src="/static/js/base.js" ></script>
+	<link rel="stylesheet" href="/static/css/base.css">
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+
+		canvas{
+			background-color: #000;
+			display: block;
+		}
+
+		.login{
+			border-radius: 50%;
+			background-color: #fff;
+			width: 100px;
+			height: 100px;
+			position: fixed;
+			top: 0;left: 0;right: 0;bottom: 0;
+			margin: auto;
+			text-align: center;
+			line-height: 100px;
+		}
+
+		.login:hover{
+			background-color: lightblue;
+			color: red;
+		}
+
+		#login-box{
+			position: fixed;
+			top: 0;left: 0;right: 0;bottom: 0;
+			margin:auto;
+			/*border: 1px solid yellow;*/
+			z-index: 1;
+			width: 20%;
+			height: 500px;
+			/*width: 300px;
+			height: 200px;
+			background: pink;*/
+			display: none;
+
+		}
+		input[type="text"] {
+			  width: 70%;
+			  padding: 1em 2em 1em 3em;
+			  color: #9199aa;
+			  font-size: 18px;
+			  outline: none;
+			  background: url(/static/img/adm.png) no-repeat 10px 15px;
+			  border: none;
+			  font-weight: 100;
+			  border-bottom: 1px solid#484856;
+			  margin-top: 2em;
+		}
+		input[type="password"]{
+			width: 70%;
+			padding: 1em 2em 1em 3em;
+			color: #dd3e3e;
+			font-size: 18px;
+			outline: none;
+			background: url(/static/img/key.png) no-repeat 10px 23px;
+			border: none;
+			font-weight: 100;
+			border-bottom: 1px solid#484856;
+			margin-bottom: 3em;
+		}
+		input[type="button"]{
+			font-size: 30px;
+			color: #fff;
+			outline: none;
+			border: none;
+			background: #3ea751;
+			width: 100%;
+			padding: 18px 0;
+			border-bottom-left-radius: 15px;
+			-webkit-border-bottom-left-radius: 15px;
+			-moz-border-bottom-left-radius: 15px;
+			-o-border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			-webkit-border-bottom-right-radius: 15px;
+			-moz-border-bottom-right-radius: 15px;
+			-o-border-bottom-right-radius: 15px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<div class="login" onselectstart="return false">
+		Login
+	</div>
+
+	<div id="login-box">
+		<!--<div class="login-box-top">
+			<span id="close">×</span>
 		</div>
-       
-    </body>
+		<form>	  			
+	    	<input type="text" placeholder="username" required="true" id = "userid" name="username" missingMessage="请输入用户名"/>	  			
+	    	<input type="password" placeholder="password" required="true" id = "passid" name="password" missingMessage="请输入密码"/>  			
+			<input type="button" value="登录" onclick="checkUser();"/>
+		</form>	-->	
+		<!--********************************************-->
+	<div class="login-form">
+		<div class="close" id="close"> </div>
+			<div class="head-info">
+				<label class="lbl-1"> </label>
+				<label class="lbl-2"> </label>
+				<label class="lbl-3"> </label>
+			</div>
+			<div class="clear"> </div>
+		<div class="avtar">
+			<img src="/static/img/avtar.png" />
+		</div>
+			<form>
+				<input type="text" class="text" placeholder="Username" required="true" id = "userid" name="username" missingMessage="请输入用户名" AUTOCOMPLETE="OFF"/>
+				<div class="key">
+					<input type="password" placeholder="Password" required="true" id = "passid" name="password" missingMessage="请输入密码"/>
+				</div>
+			</form>
+		<div class="signin">
+			<input type="button" value="登录" onclick="checkUser();">
+		</div>
+	</div>
+<!--********************************************-->
+	</div>
+	
+	
+	<script>
+		window.onload=function(){
+			var canvas=document.querySelector("#canvas");
+			var ctx=canvas.getContext("2d");
+			canvas.width=document.documentElement.clientWidth;
+			canvas.height=document.documentElement.clientHeight;
+			var circleArr=[]
+			function Circle(x,y,r,color){
+				this.x=x;
+				this.y=y;
+				this.r=r;
+			  	this.color = color || "rgb("+ (parseInt(Math.random() * 240 ) + 9) + ","+ (parseInt(Math.random() * 220 )+18) +",203)";
+	            // 随机方向
+			  	this.dx=Math.random()*12-7;
+			  	this.dy=Math.random()*12-7;
+			  	circleArr.push(this);
+			}
+	
+			Circle.prototype.render=function(){
+				ctx.beginPath();
+				ctx.arc(this.x,this.y,this.r,0,2*Math.PI,false)
+				ctx.fillStyle=this.color;
+				ctx.fill();
+			}
+	
+			Circle.prototype.update=function(){
+				this.x+=this.dx;
+				this.y+=this.dy;
+				this.r--;
+	
+				if(this.r<0){
+					for(var i=0;i<circleArr.length;i++){
+						if(circleArr[i]===this){
+							circleArr.splice(i,1)
+						}
+					}
+					return false;//r不存在
+				}
+				return true;//r是存在的
+			}
+	
+			canvas.onmousemove=function(e){
+				new Circle(e.offsetX,e.offsetY,30,"red")
+			}
+	
+			setInterval(function(){
+				ctx.clearRect(0,0,canvas.width,canvas.height)
+				for(var i=0;i<circleArr.length;i++){
+					// 每一个重新绘制
+					circleArr[i].update() && circleArr[i].render()
+				}
+			},20)
+	
+			// 框
+			var close=document.querySelector("#close");
+			var loginBox=document.querySelector("#login-box");
+	
+			var login=document.querySelector(".login");
+			close.onclick=function(){
+				loginBox.style.display="none";
+			}
+	
+			login.onclick=function(){
+				loginBox.style.display="block";
+			}
+		}
+	</script>
+</body>
 </html>

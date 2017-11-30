@@ -14,39 +14,44 @@
 
     <body background = "/static/img/login.gif">
 	<div class="header sticky-header">
-	        <div class="row">
-	            <div class="col-md-2 col-sm-2 col-xs-4">
-	                <div class="logoimg"><a href="index.html"><img src="/static/img/logo.png" alt=""></a></div>
-	            </div>
-	            <div class="col-md-9 col-sm-8 col-xs-4">                    
-	                <div class="header-right">
-	                    <div class="header-menu hidden-sm hidden-xs">
-	                        <div class="menu">
-	                            <ul>
-						<li class="li_a"><a href="/register">新添管理用户</a></li>
-	                                <li class="li_a"><a href="/lookdot">查看玩家科技点</a></li>
-	                                <li class="li_a"><a href="/lookitem">查看玩家物品信息</a></li>
-	                                <li class="li_a"><a href="/additem">增加物品给某个玩家</a></li>
-	                                <li class="li_a"><a href="/lookbox">查看玩家宝箱信息</a></li>
-	                            </ul>
-	                        </div>
-	                    </div>	
-	                </div>
-	            </div>
-				<div class="col-md-1 col-sm-2 col-xs-4">
-					<a class ="logout_a" href="/logout">logout</a>
-				</div>							
-	    	</div>		
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-3 col-sm-2 col-xs-4">
+		                <div class="logoimg"><a href="index.html"><img src="/static/img/logo.png" alt=""></a></div>
+		            </div>
+		            <div class="col-md-8 col-sm-8 col-xs-4">                    
+		                <div class="header-right">
+		                    <div class="header-menu hidden-sm hidden-xs">
+		                        <div class="menu">
+		                            <ul>
+										<li class="li_a_one"><a href="/home">返回home</a></li>
+		                                <li class="li_a"><a href="/lookdot">查看科技点</a></li>
+		                                <li class="li_a"><a href="/lookitem">查看物品</a></li>
+		                                <li class="li_a"><a href="/additem">增加物品</a></li>
+		                                <li class="li_a"><a href="/lookbox">查看宝箱</a></li>
+		                            </ul>
+		                        </div>
+		                    </div>	
+		                </div>
+		            </div>
+					<div class="col-md-1 col-sm-2 col-xs-4">
+						<a class ="logout_a" href="/logout">logout</a>
+					</div>							
+		    	</div>
+			</div>		
 	    </div>
-	<h1 style="text-align:center;">这个页面是查看玩家科技点信息页面</h1>
-    <div class="findItem_div">
-		<p>请输入想查找玩家的steam昵称</p>						
-		<input class="name_text" type="text" required="true" id = "playerid" name="playername" missingMessage="请输入玩家的名字"/>	
-		<input class="lookBox_but" type="button" value="查看玩家科技点信息" onclick="lookdot();"  />	
-		<p>玩家物品信息:</p>
-		<input class="name_text" type="text" id = "playerdot" name="playerdot"/>
-		<input class="lookBox_but" type="button" value="修改玩家科技点" onclick="changedot();"  />	
-		
-	</div>		
+		<div class="container">
+			<h1 style="text-align:center;">查看玩家科技点</h1>
+   			 <div class="findItem_div">				
+				<p>请输入玩家的steam昵称</p>
+				<div>
+					<input type="text" class="lookdot_text" required="true" id = "playerid" name="playername" missingMessage="请输入玩家的名字"/>	
+					<input type="button" style ="height: 30px;" value="查看玩家科技点信息" onclick="lookdot();"/>	
+				</div>				
+				<p>玩家科技点为:</p>
+				<input type="text" class="lookdot_text" id = "playerdot" name="playerdot"/>
+				<input type="button" style ="height: 30px;" value="修改玩家科技点" onclick="changedot();"/>			
+			</div>	
+	</div>	
 </body>
 </html>

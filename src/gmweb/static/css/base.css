@@ -12,28 +12,6 @@
 	margin-left:500px;
 }
 
-.register_form{
-	border:1px solid #AAA;
-	width:350px;
-	height:200px;
-	font-size:25px;
-	font-family:微软雅黑;
-	margin-top:50px;
-}
-
-.register_tab{
-	margin-top:20px;
-	margin-left:15px;
-}
-
-.register_btn{
-	font-size:25px;
-	font-family:微软雅黑;
-	margin-top:25px;
-	margin-left:60px;
-	width:200px;	
-}
-
 .goto_home{
 	margin-left:90%;
 	font-size:15px;
@@ -50,9 +28,9 @@
 
 .name_text{
 	margin-top:4px;	
-	height:25px;
+	height:35px;
 	width:200px;
-	font-size:20px;
+	font-size:25px;
 }
 
 .lookItem_but{
@@ -144,7 +122,6 @@
 .logoimg{
 	width: 230px;
 	height: 60px;
-	margin-left:40%;
 }
 
 .header {
@@ -165,7 +142,7 @@
 .li_a{
 	list-style:none;
 	float:left;
-	margin-left:60px;
+	margin-left:20px;
 	margin-top:18px;
 	font-size:18px
 }
@@ -180,6 +157,100 @@
 .section-heading {
     margin-bottom: 20px;
     font-size: 22px;
+}
+
+.li_a_one{
+	list-style:none;
+	float:left;
+	margin-top:18px;
+	font-size:18px
+}
+
+.lookdot_text{
+	display: inline-block;
+	margin:0 0 0 2px;
+	height:30px;
+}
+
+/*login*/
+.login-form {
+	background: #2b2b36;
+	position: relative;
+	width: 100%;
+	margin: 3% auto 0 auto;
+	text-align: center;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+.head img {
+	width: 100%;
+}
+.avtar img {
+  margin: 2em 0 0;
+}
+.head-info {
+  padding: 5px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2em;
+  color: #fff;
+  background: #23232e;
+  height: 50px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-o-border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-o-border-top-right-radius: 10p
+}
+
+.key {
+   background: url(/static/img/pass.png) no-repeat 447px 17px;
+}
+
+label.lbl-1 {
+  background: #6756ea;
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: right;
+  border-radius: 50%;
+  margin: 16px 10px 0px 0px;
+}
+label.lbl-2 {
+  background: #ea569a;
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: right;
+  border-radius: 50%;
+   margin: 16px 10px 0px 0px;
+}
+label.lbl-3 {
+  background: #f1c85f;
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: right;
+  border-radius: 50%;
+  margin: 16px 10px 0px 0px;
+}
+.close{
+background: url('/static/img/close.png') no-repeat 0px 0px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 

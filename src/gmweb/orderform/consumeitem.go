@@ -49,7 +49,7 @@ func ConsumeItemIntosteam(steamuserid string, itemid int64) bool {
 
 	form := url.Values{}
 	form.Set("key", "DCD9C36F1F54A96F707DFBE833600167")
-	form.Set("appid", "511600")
+	form.Set("appid", "675310")
 	form.Set("steamid", steamuserid)
 	form.Set("itemid", strconv.FormatInt(itemid, 10))
 	form.Set("quantity", "1") // 这里只消耗一个箱子就可以了
