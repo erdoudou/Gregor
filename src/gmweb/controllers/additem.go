@@ -39,6 +39,7 @@ func (c *AdditemController) Post() {
 	row, ret := db.QueryNormal("SELECT platformuid FROM accountconvert WHERE username=?", playername)
 	if ret == false || row == nil {
 		fmt.Println("查询错误")
+		c.Data["json"] = map[string]interface{}{"code": 0, "message": "查询错误"}
 		return
 	}
 
@@ -47,7 +48,8 @@ func (c *AdditemController) Post() {
 	var platformuid string
 
 	if row.Next() == false {
-		fmt.Println("没有数据库返回数据111111")
+		fmt.Println("玩家账号表中没有数据库返回数据")
+		c.Data["json"] = map[string]interface{}{"code": 0, "message": "数据库中没有你的账号，请用steam账号登录游戏"}
 		return
 	}
 
@@ -55,6 +57,7 @@ func (c *AdditemController) Post() {
 
 	if err != nil {
 		fmt.Println("解析失败")
+		c.Data["json"] = map[string]interface{}{"code": 0, "message": "解析错误，请联系开发人员"}
 		return
 	}
 

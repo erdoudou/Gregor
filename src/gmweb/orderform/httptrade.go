@@ -5,6 +5,7 @@ import (
 	"bytes"
 	json "encoding/json"
 	"fmt"
+	"gmweb/backpack"
 	"gmweb/box"
 	"gmweb/item"
 	"io/ioutil"
@@ -257,7 +258,7 @@ func PlayerOffLineItemDataSave(roleuid int64, itemuid int64, itemtempid int) {
 		fmt.Println("玩家不在线,物品直接存入数据库出错")
 	}
 
-	bSuc = item.SaveLogoutBag(itemuid, roleuid)
+	bSuc = bagMgr.SaveLogoutBag(itemuid, roleuid)
 	if bSuc {
 		fmt.Println("玩家不在线,物品直接存入数据库")
 	} else {
